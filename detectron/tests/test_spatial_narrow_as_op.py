@@ -29,6 +29,9 @@ from caffe2.python import workspace
 import detectron.utils.c2 as c2_utils
 import detectron.utils.logging as logging_utils
 
+import sys
+import torch
+sys.path.insert(0, torch.__path__[0])
 
 class SpatialNarrowAsOpTest(unittest.TestCase):
     def _run_test(self, A, B, check_grad=False):
